@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Class 11</title>
+    <style>
+        .static-box{
+            width: 300px;
+            height: 300px;
+            padding: 15px;
+            background-color: green;
+            border: 2px solid black;
+            position: static;
+            left: 100px;
+            z-index: 3;
+        }
+        .relative-box{
+            width: 300px;
+            height: 300px;
+            padding: 15px;
+            background-color: yellow;
+            border: 2px solid black;
+            position: relative;
+            left: 100px;
+            /* top: 50px; */
+            /* z-index: 3; */
+        }
+
+        .absolute-box{
+            width: 300px;
+            height: 300px;
+            padding: 15px;
+            background-color: blue;
+            border: 2px solid black;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+        }
+
+        .absolute-parent{
+            background-color: gold;
+            /* position: relative; */
+            position: absolute;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- CSS Positions
+    1) Static - Default -- The element is positioned according to the normal flow of the page. So if we set left/right/top/bottom/z-index there would be no effect on the element.
+
+    2) Relative -- The element's original position is according to the normal flow of the page just like the static value, but now if we set left/right/top/bottom/z-index there would be effect on the element.
+
+    3) Absolute -- The element is completely removed from the document flow. It is positioned WRT its relative containing block. It may overlap other elements or br overlaped by them.
+
+    4) Fixed -- Just like absolute, except the containing block is always the viewport.
+
+    5) Sticky -- The element sticks to the top of it's nearest positioned ancestor that has the "scrolling mechanism".
+    -->
+
+    <div class="static-box">
+        <h2>Position Static</h2>
+        <p>This box has a static position</p>
+    </div>
+
+    <div class="relative-box">
+        <h2>Position Relative</h2>
+        <p>This box has a Relative position</p>
+    </div>
+
+    <div class="absolute-parent">
+        <h1>Absolute Children</h1>
+        <div class="absolute-box">
+            <h2>Position Absolute</h2>
+            <p>This box has a Absolute position</p>
+        </div>
+        
+        <div class="absolute-box" style="background-color: brown; top: 80px;">
+            <h2>Position Absolute</h2>
+            <p>This box has a Absolute position</p>
+        </div>
+    </div>
+
+   
+
+</body>
+</html>

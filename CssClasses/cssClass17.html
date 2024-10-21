@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 17</title>
+</head>
+<style>
+    #grad1{
+        width: 400px;
+        height: 400px;
+        /* background-image: linear-gradient(to top right, red, blue); */
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.196), rgba(128, 0, 128, 0.403), rgba(255, 242, 0, 0.56));
+    }
+    #grad1:hover{
+        /* transform:; */
+        transform:  scale(2, 1) translateX(300px);
+        transition: all ease 1.5s;
+        cursor: pointer;
+    }
+    #grad2{
+        width: 400px;
+        height: 400px;
+        /* background-image: radial-gradient(red 10%, yellow 70%, blue 5%); */
+        background-image: radial-gradient(closest-side at 60% 55%, green, red, blue);
+    }
+    #grad3{
+        width: 400px;
+        height: 400px;
+        background-image: conic-gradient(rgba(255, 166, 0, 0.601) 180deg, green, blue);
+        border-radius: 100%;
+    }
+    .translate{
+        width: 300px;
+        height: 300px;
+        background-color: cadetblue;
+        transition: all ease-in 1s;
+    }
+    .translate:hover{
+        transform: translate(500px, 300px);
+    }
+    #grad3:hover{
+        transition: ease 1.5s;
+        transform: rotate(290deg);
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h2 >Using Gradients in CSS</h2>
+    <!-- 
+        Gradients helps us to display a smooth transition between two or more specified colors.
+        There are three types of gradients
+        -- Linear(goes down/up/left/right/diagonally)
+        -- Radial(this is defined by their center)
+        -- Conic (this is rotated around a center point)
+    -->
+    <h2>Linear Gradients</h2>
+    <!-- Syntax
+        background-image: linear-gradient(direction, color-stop1, color-stop2, ...) 
+    -->
+        <div id="grad1">
+
+        </div>
+
+    <h2>Radial Gradients</h2>
+    <!-- 
+        Syntax:
+        background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+    -->
+    <div id="grad2">
+
+    </div>
+
+    <h2>Conic Gradients</h2>
+    <!-- 
+        Syntax:
+        background-image: conic-gradient([from angle] [at position,] color [degree], color[degree], ...)
+    -->
+    <div id="grad3"></div>
+
+    <h2 style="text-shadow: 2px 3px grey; font-size: 50px; text-align: center;">Text Shadow Example</h2>
+
+    <img src="../images/shop.jpeg" alt="" style="box-shadow: 10px 10px 5px;">
+
+    <h2 style="font-size: 40px; text-align: center; text-shadow: 3px 3px rgba(0, 0, 255, 0.304);">CSS Transforms</h2>
+    <!-- CSS transforms allows us to move, rotate, scale, skew elements. -->
+     <div class="translate">
+
+     </div>
+</body>
+</html>

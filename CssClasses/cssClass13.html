@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 13</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --mySpecialBlue: rgba(35, 55, 152, 0.67);
+            --primaryRed: rgb(83, 15, 7);
+            --mainFont: "Epilogue", sans-serif;
+        }
+        h2{
+            --myLocalBlue: rgb(161, 161, 237);
+            background-color: var(--myLocalBlue);
+        }
+        p{
+            color: var(--myLocalBlue);
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Variables
+        The var() function is used to insert the value of a CSS Variable.
+        A css variable can be of local or global scope. 
+        The variable name must begin with two dashes (--) and it is case sensitive.
+        Global scoped variable can be accessed throughout the entire document
+        To create a variable with global scope, we decalre it inside the :root selector.
+    -->
+
+        <header>
+            <h2>Logo</h2>
+            <nav style="background-color: var(--primaryRed); padding: 10px;">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </nav>
+            <div class="">
+                <button>Login</button>
+                <button>Sign In</button>
+            </div>
+        </header>
+        <p style="font-family: var(--mainFont);">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vel optio autem facilis error, temporibus, beatae nam animi unde praesentium doloremque possimus, similique velit soluta libero neque harum explicabo sint.
+        </p>
+
+        <!-- CSS BOX SIZZING
+        In Css the box-sizing property is used to define how the width and height of an element are calculated. It determines whether padding and borders are included in the element's total width and height.
+        
+        content-box: is the default value. Here only the content's width and height are considered. 
+
+        border-box: The padding and border are included inside the width and height. This means that the content size is reduced to make space for the padding and borders
+        -->
+        <div style="box-sizing: content-box; width: 200px; height: 200px; background-color: aliceblue; padding: 20px; border: 10px solid blue;">
+            <p>
+                This shows content Box
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt possimus harum nisi eius dolore. Cumque quas obcaecati maiores. Harum eveniet impedit odio? Quam ea quidem quia fugiat tempore accusamus qui!
+            </p>
+        </div> <br>
+        <div  style="box-sizing: border-box; width: 200px;  background-color: aliceblue; padding: 20px; border: 10px solid blue;">
+            This shows border box
+        </div>
+</body>
+</html>
