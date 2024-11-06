@@ -57,3 +57,4 @@ console.error("This is an error")
 console.warn("This is a warning")
 
 // Using ternary operators, prompt the user to enter his course of study, if the course is science output, hi you are studying a science course, else if its an art output hi you are studying an Art course, else output you are studying some other course. 
+
