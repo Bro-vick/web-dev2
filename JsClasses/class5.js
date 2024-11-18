@@ -59,13 +59,4 @@ for(let i = 10; i >= 0; i--){
 for(let i = 10; i >= 0; i--){
     console.log(Math.random() * 10);
 };
-// do{
-//     let play = confirm("Do you want to play my wonderful game? (yes/no)")
-//     if(play){
-//         for(let i = 3; i > 0; i--){
-//             let guess = prompt("Pick a number from 1-20");
-//             let answer = Math.floor(Math.random() * 20);
-//             (guess > answer) ? conso"Sorry the the number is too big"
-//         }
-//     }
-// }
+
