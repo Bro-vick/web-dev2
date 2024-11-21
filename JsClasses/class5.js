@@ -60,3 +60,5 @@ for(let i = 10; i >= 0; i--){
     console.log(Math.random() * 10);
 };
 
+
+// Nested Loops: This is a loop inside another loop
