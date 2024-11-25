@@ -51,3 +51,5 @@ console.table(fruits);
 // 10)  concat() method creates a new array by merging existing arrays.
 const colorFruits = colors.concat(fruits);
 console.table(colorFruits);
+
+
