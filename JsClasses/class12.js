@@ -6,6 +6,9 @@ console.log(str.length);
 
 //split method: is used to split the string into an array of words
 console.log(str.split(", "));
+let str5 = "obinna"
+let obiArray = str5.split("")
+console.log(obiArray);
 
 //replace method: is used to replace matching text 
 console.log(str.replace("to", "?"));
@@ -37,3 +40,11 @@ console.log(str.charCodeAt(12));
 let str1 = "Hi there";
 let str2 = str1.concat(" ", str);
 console.log(str2);
+
+// These two are array methods
+
+let obiSort = obiArray.sort();
+console.log(obiSort);
+
+let newObi = obiSort.join("");
+console.log(newObi);
