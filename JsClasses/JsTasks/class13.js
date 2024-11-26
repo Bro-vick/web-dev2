@@ -45,9 +45,12 @@ car.name = "Mercedes";
 car.color = "Red";
 car.year = 2010;
 car.isRegistered = false;
+car.drive = () => {
+    console.log("The " + car.name +  " car is driving!!!")
+}
 
 console.log(car);
-
+car.drive()
 // 3) Using the Constructor function
 function Bike(bName, bcolor, bmodel, byear){
     this.name = bName;
