@@ -57,6 +57,9 @@ function Bike(bName, bcolor, bmodel, byear){
     this.color = bcolor;
     this.model = bmodel;
     this.year = byear;
+    // Default property
+    this.isNew = true;
+    this.engine = "V8-Fuel Engine";
     this.drive = function(){
         console.log(`I am driving my ${this.name} bike now.`);
     };
@@ -71,6 +74,8 @@ let bike3 = new Bike("Ducati", "white", "luxry", 2020, 40);
 
 console.log(bike1)
 console.log(bike2)
+bike3.engine = "v6-Diesel Engine"
+bike3.driver = "Emeka"
 console.log(bike3)
 
 
