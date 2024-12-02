@@ -50,3 +50,11 @@ function randInt(n){
 };
 console.log("Random Numbers:")
 randInt(5);
+
+// Number: Represents numerical data.
+// methods: toString(), toFixed(), toPrecision(), etc
+
+let num = 123.456;
+console.log(num.toString()); // Converts to string ("123.456")
+console.log(num.toFixed(2)); // Rounds to 2 decimal places (123.46)
+console.log(num.toPrecision(4)); // Rounds to 4 significant digits (123.5)
