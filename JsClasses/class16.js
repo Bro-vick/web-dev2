@@ -31,15 +31,13 @@ console.log(parseInt('3.642'));
 
 // nodejs global Object
 // properties: 
-console.log(__dirname, __filename);
+// console.log(__dirname, __filename);
 //methods:
 // console: which provides a simple debugging console.
 // console.log, .error, .warn, .info, .table etc
 
 // setTimeout() -- This just calls a function after a specified number of milliseconds.
-setTimeout(() =>{
-    console.log('Executed after 3 seconds')
-}, 3000);
+setTimeout(() =>{console.log('Executed after 3 seconds')}, 3000);
 // setInterval(() => {
 //     console.log('Executed every 3seconds')
 // }, 3000);
@@ -48,6 +46,7 @@ const interval = setInterval(() => {
     console.log('Executed every 3seconds')
 }, 3000);
 // clearInterval() - this stops the setInterval loop
-// interval();
+
+console.log(interval)
 
 setTimeout(() => clearInterval(interval), 15000);

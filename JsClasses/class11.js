@@ -52,4 +52,11 @@ console.table(fruits);
 const colorFruits = colors.concat(fruits);
 console.table(colorFruits);
 
+// 11) fill() This method fills an array with a given value, it overwrites the original array, if the start and end position isn't specified, all elements would be filled.
+fruits.fill("Test")
+console.table(fruits)
+
+colorFruits.fill("Color", 1, 8)
+console.table(colorFruits);
+
 

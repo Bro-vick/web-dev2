@@ -19,4 +19,43 @@
 
     Math.max() would be used in the solution.
 */
-console.log(Math.max(20, 25, 50, 40, 281))
+
+// Brute Force Solution
+function maxPrice(prices){
+    let buy, sell;
+    let profit = 0;
+    for(let i = 0; i < prices.length; i++){
+        for(let j = i + 1; j < prices.length; j++){
+            buy = prices[i];
+            sell = prices[j];
+            let profitEqn = sell - buy;
+            profit = Math.max(profit, profitEqn);
+        }
+    }
+    return profit;
+};
+
+let prices1 = [7,1,5,3,6,4];
+let prices2 = [7,6,4,3,1];
+
+// console.log(maxPrice(prices1));
+// console.log(maxPrice(prices2));
+
+// Two Pointers Solution
+function maxPrice2(prices){
+    let left = 0; let right = 1;
+    let profit = 0;
+    while(right < prices.length){
+        if(prices[left] < prices[right]){
+            let profitEqn = prices[right] - prices[left]
+            profit = Math.max(profit, profitEqn)
+        }else{
+            left = right
+        };
+        right++;
+    };
+    return profit;
+};
+
+console.log(maxPrice2(prices1));
+console.log(maxPrice2(prices2));
