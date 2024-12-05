@@ -59,4 +59,22 @@ console.table(fruits)
 colorFruits.fill("Color", 1, 8)
 console.table(colorFruits);
 
+// 12) sort(): The sort() method sorts an array alphabetically
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+fruits2.sort()
+console.table(fruits2)
+let num1 = [2, 1, 4, 9, 5];
+console.table(num1.sort())
+let num2 = [40, 100, 1, 5, 25, 10];
+console.table(num2.sort())
+/*
+By default, the sort() function sorts values as strings.
+This works well for strings ("Apple" comes before "Banana").
+If numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+Because of this, the sort() method will produce incorrect result when sorting numbers.
+You can fix this by providing a compare function:
+*/
+console.table(num2.sort(function(a, b){return a - b}))
+// Using arrow function
+console.table(num2.sort((a, b) => b - a))
 

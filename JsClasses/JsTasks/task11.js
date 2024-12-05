@@ -23,3 +23,38 @@
     Output: [[0,0,0]]
     Explanation: The only possible triplet sums up to 0.
 */
+// Two Pointers Solution
+function threeSum(nums) {
+    nums.sort((a, b) => a - b); // Sort the array
+    const res = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) break; // If the current number is positive, break (no triplet can sum to 0)
+        if (i > 0 && nums[i] === nums[i - 1]) continue; // Skip duplicate values for the first element
+
+        let l = i + 1, r = nums.length - 1;
+
+        while (l < r) {
+            const sum = nums[i] + nums[l] + nums[r];
+            
+            if (sum === 0) {
+                res.push([nums[i], nums[l], nums[r]]); // Found a valid triplet
+                l++;
+                r--;
+
+                // Skip duplicates for the left and right pointers
+                while (l < r && nums[l] === nums[l - 1]) l++;
+                while (l < r && nums[r] === nums[r + 1]) r--;
+            } else if (sum < 0) {
+                l++; // Increase the left pointer to get a larger sum
+            } else {
+                r--; // Decrease the right pointer to get a smaller sum
+            }
+        }
+    }
+
+    return res;
+}
+
+let nums = [-1,0,1,2,-1,-4];
+console.log(threeSum(nums))
