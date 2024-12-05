@@ -22,19 +22,15 @@
 
 // Brute Force Solution
 function maxPrice(prices){
-    let buy, sell;
     let profit = 0;
     for(let i = 0; i < prices.length; i++){
         for(let j = i + 1; j < prices.length; j++){
-            buy = prices[i];
-            sell = prices[j];
-            let profitEqn = sell - buy;
+            let profitEqn = prices[j] - prices[i];
             profit = Math.max(profit, profitEqn);
         }
     }
     return profit;
 };
-
 let prices1 = [7,1,5,3,6,4];
 let prices2 = [7,6,4,3,1];
 
