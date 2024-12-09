@@ -48,7 +48,7 @@ function threeSum(nums) {
             } else if (sum < 0) {
                 l++; // Increase the left pointer to get a larger sum
             } else {
-                r--; // Decrease the right pointer to get a smaller sum
+                r--; // Decrease the right pointer to get a simaller sum
             }
         }
     }
