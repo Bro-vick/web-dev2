@@ -49,3 +49,12 @@
     Request: A client (such as a web browser or an application) makes a request to an API endpoint. This request typically includes an HTTP method(Get, Post, Put, Delete), etc.
     Response: The server processes the request and sends back a response which includes a status code (indicating success or failure), headers, and usually a body containing the requested data or confirmation of an action.
 */
+
+// Look Up Higher Order Functions. With examples
+
+
+
+
+
+
+

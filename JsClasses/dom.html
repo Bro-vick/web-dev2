@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="header">Introduction to DOM</h1>
+    <nav id="navbar">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+    <script>
+         /* DOM (Document Object Model): represents all page contents as objects that can be modified.
+            The document object is the main entry point to the page. We can change anything on the page using it.      
+        */
+
+        document.body.style.backgroundColor = "lightgreen";
+
+        // Selecting elements
+        // Using ID names
+        const head = document.getElementById('header');
+        head.style.color = "purple";
+
+        // Using Query Selector
+        const navbar = document.querySelector('#navbar');
+        navbar.style.backgroundColor = "lightgrey";
+        const links = document.querySelectorAll('#navbar a')
+        for(let i = 0; i < links.length; i++){
+            links[i].style.padding = "10px"
+            links[i].style.color = "green"
+        }
+        
+    </script>
+</body>
+</html>

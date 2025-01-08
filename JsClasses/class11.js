@@ -13,6 +13,7 @@ console.table(colors);
 let colorsSplit = colorsJoin.split(", ");
 console.log(colorsSplit);
 
+
 // 4) push(): Adds an item to the end of an array
 colors.push("Grey");
 colors.push("black");
